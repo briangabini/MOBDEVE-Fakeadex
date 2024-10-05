@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="300dp"
+        android:layout_height="273dp"
+        android:background="@color/black"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:srcCompat="@drawable/img16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="29dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Chocowool"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@+id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="It very much loves hugs however one should be aware that it may leave a blob of chocolate on whatever it hugs."
+        android:textColor="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/speciesInfo"
+        android:layout_width="115dp"
+        android:layout_height="19dp"
+        android:gravity="center"
+        android:text="Cotton Sweet"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/locationInfo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/speciesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/speciesLabel" />
+
+    <TextView
+        android:id="@+id/locationInfo"
+        android:layout_width="115dp"
+        android:layout_height="19dp"
+        android:gravity="center"
+        android:text="Orange Road"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/locationLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/speciesInfo"
+        app:layout_constraintTop_toBottomOf="@+id/locationLabel" />
+
+    <TextView
+        android:id="@+id/speciesLabel"
+        android:layout_width="115dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="SPECIES"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/locationLabel"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/description"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="115dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="LOCATION"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/description"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/speciesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        style="@style/CustomButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="@+id/locationInfo"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/speciesInfo"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
